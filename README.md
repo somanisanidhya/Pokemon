@@ -54,38 +54,110 @@ Ensure you have [Node.js](https://nodejs.org/en/) installed on your machine.
    ```bash
    npm run dev
    ```
+   The application will be available at `http://localhost:3000`
 
-4. **Open in browser:**
-   Navigate to [http://localhost:3000](http://localhost:3000) to view the application in your browser.
+## Project Requirements
 
-## 📂 Project Structure
+The project is structured into three progressive levels, each building upon the previous one.
 
-```text
-├── app/
-│   ├── poke/               # Main application route
-│   │   ├── loading.jsx     # Sleek skeleton loading UI
-│   │   ├── error.jsx       # Custom error boundary
-│   │   ├── layout.jsx      # Nested layout wrapper
-│   │   └── page.jsx        # Data fetching and parent layout composition
-│   ├── globals.css         # Global Tailwind directives and custom variables
-│   ├── layout.js           # Root HTML and font definitions
-│   └── page.js             # Root redirect to /poke
-├── components/
-│   ├── PokemonView.jsx     # Main interactive view coordinating table and details
-│   ├── PokemonTable.jsx    # Paginated table display component
-│   ├── PokemonDetails.jsx  # Rich detail view for the active selection
-│   ├── TypeTabs.jsx        # Segmented control for Pokémon types
-│   └── Pagination.jsx      # Pagination controls for the table
-├── public/                 # Static assets
-└── package.json            # Project dependencies & scripts
-```
+### Level 1: Pokémon Table with Pagination
 
-## 💡 Implementation Highlights
+**Requirements:**
+1. Create a table displaying Pokémon data from `https://pokeapi.co/api/v2/pokemon`
+   - Columns: Sr. Number, Poke Name
+   - Implement at `/poke` route using Next.js App Router
 
-- **Server-Side & Client-Side Architectures**: Uses App Router paradigms to intelligently separate UI interactiveness (Client Components) from UI skeletons and routing logic.
-- **Efficient State Management**: Clean hierarchical state architecture handling active Pokémon selection without unnecessary external libraries.
-- **Fully Responsive Structure**: Utilizing specialized Flexbox methodologies and responsive Tailwind utility classes to adapt from mobile vertically-stacked views to a powerful side-by-side desktop view.
+2. Pagination Implementation
+   - Add Previous/Next navigation controls
+   - Display total page count
+   - Implement proper button states (disabled when appropriate)
+   - Handle data fetching for page navigation
+
+### Level 2: Interactive Pokémon Details
+
+**Requirements:**
+1. Clickable Pokémon Names
+   - Fetch and display detailed information on click
+   - Show Pokémon types as tabs on the right side
+
+2. Type-Specific Information
+   - Display relevant data under each type tab:
+     - Game Indices count
+     - Total moves count
+   - Implement smooth tab switching with data updates
+
+### Level 3: Enhanced User Experience
+
+**Requirements:**
+1. Error Handling
+   - Implement comprehensive error handling for API calls
+   - Display user-friendly error messages
+   - Handle edge cases gracefully
+
+2. Loading States
+   - Add loading indicators during data fetching
+   - Ensure smooth transitions between states
+
+## Project Layout
+
+The wireframe below represents the basic layout structure. You have creative freedom for the final design implementation.
+
+![Wireframe](./public/Wireframe_Assessment-2.jpg)
+
+## Development Guidelines
+
+1. **Code Quality**
+   - Follow React best practices
+   - Break down components logically
+   - Implement effective prop and state management
+   - Write clean, maintainable code
+
+2. **Git Practices**
+   - Maintain a clean and meaningful commit history
+   - Write descriptive commit messages
+   - Your git history will be reviewed to understand your development process
+
+## Important Notes
+
+1. **Time Management**
+   - Take sufficient time to demonstrate best practices
+   - Focus on code quality and architecture
+   - Don't rush the implementation
+
+2. **Allowed Resources**
+   - ✅ Google search
+   - ✅ Third-party UI libraries
+   - ✅ NPM packages for functionality
+
+3. **Restrictions**
+   - ❌ AI tools (ChatGPT, GitHub Copilot, etc.)
+   - Note: Submissions will be verified using zerogpt.com
+   - AI usage will lead to disqualification
+
+## Evaluation Criteria
+
+1. **Functionality**
+   - Completion of all three levels
+   - Accurate API integration
+   - Proper error handling
+
+2. **Code Quality**
+   - Component reusability
+   - Code organization
+   - Best practices implementation
+
+3. **Development Process**
+   - Git commit history
+   - Problem-solving approach
+   - Code structure decisions
+
+## Submission
+
+1. Ensure all features are working as expected
+2. Verify your git history is clean and meaningful
+3. Make sure the code runs without any errors
+4. Double-check the implementation against all requirements
 
 ---
 
-*This application was built to demonstrate robust frontend capabilities—showcasing advanced API integration, engaging dynamic UI, and modern Next.js/React development practices.*
+Good luck with your assessment! If you have any questions, please reach out to the hiring team.
