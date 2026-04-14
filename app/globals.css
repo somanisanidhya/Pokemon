@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #fdfbfb 0%, #eaedee 100%);
+  color: #1a202c;
+  min-height: 100vh;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+  }
+}
