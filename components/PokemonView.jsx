@@ -16,8 +16,8 @@ export default function PokemonView({ data, total, page }) {
                 <h2 className="text-4xl font-extrabold text-slate-800 tracking-tight">National Pokédex</h2>
             </div>
             
-            <div className="flex flex-row gap-4 md:gap-8 items-start">
-               <div className="w-1/2 lg:w-3/5 xl:w-2/3 flex flex-col gap-6">
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+               <div className="w-full md:w-1/2 lg:w-3/5 xl:w-2/3 flex flex-col gap-6">
                    <div className="bg-white/80 backdrop-blur-xl border border-slate-200 rounded-3xl p-2 shadow-xl shadow-slate-200/50">
                        <PokemonTable 
                             pokemons={data} 
@@ -30,7 +30,7 @@ export default function PokemonView({ data, total, page }) {
                    </div>
                </div>
 
-               <div className="w-1/2 lg:w-2/5 xl:w-1/3 sticky top-28 transition-all duration-300">
+               <div className="w-full md:w-1/2 lg:w-2/5 xl:w-1/3 sticky top-28 transition-all duration-300">
                    {selected ? (
                        <PokemonDetails 
                             name={selected} 
